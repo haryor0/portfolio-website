@@ -1744,7 +1744,10 @@ input, select, textarea {
 .gallery-item {
     margin-right: 20px; /* Space between gallery items */
     flex-shrink: 0; /* Prevent shrinking of items */
-    text-align: center; /* Center align the text and image */
+    display: flex; /* Use flexbox for centering */
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center align the items */
+    text-align: center; /* Center align the text */
 }
 
 .gallery img {
