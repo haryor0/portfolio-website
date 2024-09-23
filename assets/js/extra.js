@@ -63,3 +63,16 @@ function toggleReadMore5() {
         readMoreLink.textContent = 'Read More...';
     }
 }
+
+function toggleReadMore6() {
+    var moreContent = document.querySelector('.more-content-6');
+    var readMoreLink = document.querySelector('.read-more-6');
+
+    if (moreContent.style.display === 'none' || moreContent.style.display == ''){
+        moreContent.style.display = 'block';
+        readMoreLink.textContent = 'Read Less';
+    } else {
+        moreContent.style.display = 'none';
+        readMoreLink.textContent = 'Read More...';
+    }
+}

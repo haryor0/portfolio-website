@@ -1691,6 +1691,11 @@ input, select, textarea {
 	cursor: pointer
 }
 
+.read-more-6 {
+	color: gray;
+	cursor: pointer
+}
+
 .more-content {
 	display: none;
 }
@@ -1708,4 +1713,79 @@ input, select, textarea {
 
 .more-content-5 {
 	display: none;
+}
+
+.more-content-6 {
+	display: none;
+}
+
+.gallery {
+    display: flex;
+    overflow-x: auto; /* Allow horizontal scrolling */
+    padding: 10px;
+    scrollbar-width: thin; /* For Firefox */
+    background-color: transparent; /* Ensure background is transparent */
+}
+
+.gallery::-webkit-scrollbar {
+    height: 8px; /* Scrollbar height */
+    background: transparent; /* Remove background color */
+}
+
+.gallery::-webkit-scrollbar-thumb {
+    background: #888; /* Custom scrollbar color */
+    border-radius: 4px; /* Rounded corners for scrollbar */
+}
+
+.gallery::-webkit-scrollbar-thumb:hover {
+    background: #555; /* Darker color on hover */
+}
+
+.gallery-item {
+    margin-right: 20px; /* Space between gallery items */
+    flex-shrink: 0; /* Prevent shrinking of items */
+    text-align: center; /* Center align the text and image */
+}
+
+.gallery img {
+    border-radius: 7px; /* Rounded corners for images */
+    height: 374px; /* Maintain a fixed height */
+    width: auto; /* Allow the width to adjust and maintain aspect ratio */
+    transition: transform 0.3s; /* Smooth transition for scaling */
+    display: block; /* Ensure images are block-level elements */
+}
+
+.gallery img:hover {
+    transform: scale(1.05); /* Scale the image on hover */
+}
+
+.description {
+    margin-top: 8px; /* Space between image and description */
+    text-align: center; /* Center the text */
+    font-size: 14px; /* Font size for the description */
+	font-family: monospace;
+	font-style: italic;
+    color: white; /* Color for the description text */
+    max-width: 374px; /* Ensure the text doesn't exceed the image's width */
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .gallery img {
+        height: auto; /* Allow height to scale */
+        max-height: 200px; /* Set maximum height for smaller screens */
+        width: auto; /* Maintain aspect ratio */
+    }
+}
+
+@media (max-width: 480px) {
+    .gallery img {
+        height: auto; /* Allow height to scale */
+        max-height: 150px; /* Set maximum height for very small screens */
+        width: auto; /* Maintain aspect ratio */
+    }
+
+    .description {
+        font-size: 12px; /* Smaller font size for very small screens */
+    }
 }
