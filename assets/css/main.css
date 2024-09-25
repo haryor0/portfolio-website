@@ -1725,20 +1725,7 @@ input, select, textarea {
     padding: 10px;
     scrollbar-width: thin; /* For Firefox */
     background-color: transparent; /* Ensure background is transparent */
-}
-
-.gallery::-webkit-scrollbar {
-    height: 8px; /* Scrollbar height */
-    background: transparent; /* Remove background color */
-}
-
-.gallery::-webkit-scrollbar-thumb {
-    background: #888; /* Custom scrollbar color */
-    border-radius: 4px; /* Rounded corners for scrollbar */
-}
-
-.gallery::-webkit-scrollbar-thumb:hover {
-    background: #555; /* Darker color on hover */
+	-webkit-overflow-scrolling: touch;
 }
 
 .gallery-item {
